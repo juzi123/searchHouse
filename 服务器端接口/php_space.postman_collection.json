@@ -1,0 +1,641 @@
+{
+	"info": {
+		"_postman_id": "99e6d061-cdd1-9cae-e505-a08c6430dc1b",
+		"name": "php_space",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"description": null,
+			"item": [
+				{
+					"name": "renter",
+					"description": "",
+					"item": [
+						{
+							"name": "添加对租用房屋评价",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "userId",
+											"value": "577",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "houseId",
+											"value": "1",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "comment",
+											"value": "房主人很好, 值得推荐",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://www.wangqing.com/space/public/api/v1/user/add_comments",
+									"protocol": "http",
+									"host": [
+										"www",
+										"wangqing",
+										"com"
+									],
+									"path": [
+										"space",
+										"public",
+										"api",
+										"v1",
+										"user",
+										"add_comments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取自己发布的评论信息",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "120/space/public/api/v1/user/get_comments?userId=577",
+									"host": [
+										"120"
+									],
+									"path": [
+										"space",
+										"public",
+										"api",
+										"v1",
+										"user",
+										"get_comments"
+									],
+									"query": [
+										{
+											"key": "userId",
+											"value": "577"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取收藏房屋信息",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "www.wangqing.com/space/public/api/v1/user/get_house_fav?userId=577",
+									"host": [
+										"www",
+										"wangqing",
+										"com"
+									],
+									"path": [
+										"space",
+										"public",
+										"api",
+										"v1",
+										"user",
+										"get_house_fav"
+									],
+									"query": [
+										{
+											"key": "userId",
+											"value": "577"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "添加房屋收藏",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "www.wangqing.com/space/public/api/v1/user/add_house_fav?userId=577&houseId=3",
+									"host": [
+										"www",
+										"wangqing",
+										"com"
+									],
+									"path": [
+										"space",
+										"public",
+										"api",
+										"v1",
+										"user",
+										"add_house_fav"
+									],
+									"query": [
+										{
+											"key": "userId",
+											"value": "577"
+										},
+										{
+											"key": "houseId",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "用户取消房屋收藏",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "www.wangqing.com/space/public/api/v1/user/delete_house_fav?userId=577&houseId=3",
+									"host": [
+										"www",
+										"wangqing",
+										"com"
+									],
+									"path": [
+										"space",
+										"public",
+										"api",
+										"v1",
+										"user",
+										"delete_house_fav"
+									],
+									"query": [
+										{
+											"key": "userId",
+											"value": "577"
+										},
+										{
+											"key": "houseId",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "landlord",
+					"description": "",
+					"item": [
+						{
+							"name": "房主获取所有已发布房屋信息",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "120.79.251.134/space/public/api/v1/house/get_public_house?user_id=2",
+									"host": [
+										"120",
+										"79",
+										"251",
+										"134"
+									],
+									"path": [
+										"space",
+										"public",
+										"api",
+										"v1",
+										"house",
+										"get_public_house"
+									],
+									"query": [
+										{
+											"key": "user_id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "修改房屋状态",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "120.79.251.134/space/public/api/v1/house/change_house_status?house_id=576&status=0",
+									"host": [
+										"120",
+										"79",
+										"251",
+										"134"
+									],
+									"path": [
+										"space",
+										"public",
+										"api",
+										"v1",
+										"house",
+										"change_house_status"
+									],
+									"query": [
+										{
+											"key": "house_id",
+											"value": "576"
+										},
+										{
+											"key": "status",
+											"value": "0"
+										}
+									]
+								},
+								"description": "已出租状态or空房状态"
+							},
+							"response": []
+						},
+						{
+							"name": "添加房屋信息",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "user_id",
+											"value": "1",
+											"type": "text",
+											"description": ""
+										},
+										{
+											"key": "capacity",
+											"value": "四室两厅四卫",
+											"type": "text",
+											"description": ""
+										},
+										{
+											"key": "pay_way",
+											"value": "年付",
+											"type": "text",
+											"description": ""
+										},
+										{
+											"key": "price",
+											"value": "1000元/月",
+											"type": "text",
+											"description": "0-空房, 1-已入住"
+										},
+										{
+											"key": "status",
+											"value": "0",
+											"type": "text",
+											"description": ""
+										},
+										{
+											"key": "area",
+											"value": "160平米",
+											"type": "text",
+											"description": ""
+										},
+										{
+											"key": "title",
+											"value": "精装修视野好带家具家电出租",
+											"type": "text",
+											"description": ""
+										},
+										{
+											"key": "longitude",
+											"value": "122.047043",
+											"type": "text",
+											"description": ""
+										},
+										{
+											"key": "latitude",
+											"value": "37.4958",
+											"type": "text",
+											"description": ""
+										},
+										{
+											"key": "address",
+											"value": "威海北站",
+											"type": "text",
+											"description": ""
+										},
+										{
+											"key": "introduction",
+											"value": "2室向阳，精装修，室内干净整洁，要求干净住户，要像爱护自己的家一样的保护，*年轻人入住，南面没有挡，视野很好，直接看到青青的大山，楼下就有很大的菜市场，交通便利，周边配套齐全",
+											"type": "text",
+											"description": ""
+										},
+										{
+											"key": "from_time",
+											"value": "1525410373",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "to_time",
+											"value": "1525423547",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "www.wangqing.com/space/public/api/v1/house/add_house",
+									"host": [
+										"www",
+										"wangqing",
+										"com"
+									],
+									"path": [
+										"space",
+										"public",
+										"api",
+										"v1",
+										"house",
+										"add_house"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "删除发布的房屋信息",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "120.79.251.134/space/public/api/v1/house/remove_public_house?userId=579&houseId=588",
+									"host": [
+										"120",
+										"79",
+										"251",
+										"134"
+									],
+									"path": [
+										"space",
+										"public",
+										"api",
+										"v1",
+										"house",
+										"remove_public_house"
+									],
+									"query": [
+										{
+											"key": "userId",
+											"value": "579"
+										},
+										{
+											"key": "houseId",
+											"value": "588"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "用户注册",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "卜俊杰(求租人)",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "bujunjie123",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "17862702670",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "120.79.251.134/space/public/api/v1/user/register",
+							"host": [
+								"120",
+								"79",
+								"251",
+								"134"
+							],
+							"path": [
+								"space",
+								"public",
+								"api",
+								"v1",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "用户登录",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "王庆(求组人)",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "152512wq",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "120.79.251.134/space/public/api/v1/user/login",
+							"host": [
+								"120",
+								"79",
+								"251",
+								"134"
+							],
+							"path": [
+								"space",
+								"public",
+								"api",
+								"v1",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "用户信息",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "www.wangqing.com/space/public/api/v1/user/user_info?userId=1",
+							"host": [
+								"www",
+								"wangqing",
+								"com"
+							],
+							"path": [
+								"space",
+								"public",
+								"api",
+								"v1",
+								"user",
+								"user_info"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "所有待出租房屋",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "120.79.251.134/space/public/api/v1/house/get_all_spare_house",
+							"host": [
+								"120",
+								"79",
+								"251",
+								"134"
+							],
+							"path": [
+								"space",
+								"public",
+								"api",
+								"v1",
+								"house",
+								"get_all_spare_house"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取房屋的评价信息",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://www.wangqing.com/space/public/api/v1/house/get_comments?houseIds=1",
+							"protocol": "http",
+							"host": [
+								"www",
+								"wangqing",
+								"com"
+							],
+							"path": [
+								"space",
+								"public",
+								"api",
+								"v1",
+								"house",
+								"get_comments"
+							],
+							"query": [
+								{
+									"key": "houseIds",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Gaode",
+			"description": null,
+			"item": [
+				{
+					"name": "地址转换为坐标",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://restapi.amap.com/v3/geocode/geo?key=8bee4af1cca644510b7d5448170a0f8e&address=贵和花园&city=威海",
+							"protocol": "http",
+							"host": [
+								"restapi",
+								"amap",
+								"com"
+							],
+							"path": [
+								"v3",
+								"geocode",
+								"geo"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "8bee4af1cca644510b7d5448170a0f8e"
+								},
+								{
+									"key": "address",
+									"value": "贵和花园"
+								},
+								{
+									"key": "city",
+									"value": "威海"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
