@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./loadingStyle.css">
+    <title>地图租房</title>
+</head>
+
+<body>
+    <div class="background">
+        <div class="bgColor"></div>
+    </div>
+    <div class="main">
+        <div class="panel">
+            <div class="roll_img">
+                <div class="roll_panel">
+                    <div class="img_text sign_up_text">
+                        <h2>New here?</h2>
+                        <p>Sign up and discover great amount of new opportunities!</p>
+                    </div>
+                    <div class="img_text sign_in_text">
+                        <h2>One of us?</h2>
+                        <p>If you already has an account, just sign in. We've missed you!</p>
+                    </div>
+                    <div class="img_btn">
+                        <button class="sign_up_btn" id="sign_up_btn">Sign Up</button>
+                        <button class="sign_in_btn" id="sign_in_btn">Sign In</button>
+                    </div>
+                </div>
+            </div>
+            <form class="sign_in">
+                <h2>Welcome back,</h2>
+                <label>
+                    <h3>用户名</h3>
+                    <input id="signInName" type="text">
+                </label>
+                <label>
+                    <h3>密码</h3>
+                    <input id="signInPassword" type="password">
+                </label>
+                <button type="button" class="submit" id="signInSubmit">登录</button>
+            </form>
+            <form class="sign_up">
+                <h2>Time to feel like home,</h2>
+                <label>
+                    <h3>用户名</h3>
+                    <input id="signUpName" type="text">
+                </label>
+                <label>
+                    <h3>密码</h3>
+                    <input id="signUpPassword" type="password">
+                </label>
+                <label>
+                    <h3>电话号码</h3>
+                    <input id="signUpTelephone" type="text">
+                </label>
+                <button type="button" class="submit" id="signUpSubmit">注册</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="alert"></div>
+
+    <script src="./loadingjs/jquery-3.3.1.min.js"></script>
+    <script src="./loadingjs/main.js"></script>
+</body>
+
+</html>

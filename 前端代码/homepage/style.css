@@ -1,0 +1,62 @@
+body {background-color: #1A1F2A;color: black;}
+* {margin: 0;padding: 0;}
+h1,h2,h3,h4 {font-weight: normal;}
+a {text-decoration: none;color: inherit;}
+.clearfix::after {content: '';display: block;clear: both;}
+.icon {width: 1em;height: 1em;vertical-align: -0.15em;fill: currentColor;overflow: hidden;}
+.site-welcome {display: none;position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: #888;z-index: 1;justify-content: center;align-items: center;}
+.site-welcome.active {display: flex;}
+.loading {width: 200px;height: 200px;position: relative;}
+.loading::before,
+.loading::after {content: '';position: absolute;background: black;width: 0;height: 0;top: 0;bottom: 0;left: 0;right: 0;margin: auto;border-radius: 50%;animation: s 1.2s linear infinite;}
+.loading::after {animation-delay: 0.6s;}
+@keyframes s {0% {width: 0;height: 0;opacity: 0.7;}100% {width: 100px;height: 100px;opacity: 0;}}
+.topDiv {width: 100%; position: fixed; z-index: 1;transition: all 0.75s;}
+.topDiv.sticky {background-color: rgba(26, 31, 42, 0.8); color: #9A9DA2; box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);}
+.topDiv>.topNavBar {padding: 30px 10px 30px 10px; max-width: 1200px; margin: auto; color: #b7b7b7;transition: all 0.75s;}
+.topDiv>.topNavBar.sticky {padding: 10px 10px 10px 10px;}
+.topDiv>.topNavBar>.logo {font-size: 24px;padding: 11px 4px;font-family: 'Arial Black';}
+.topDiv>.topNavBar>.logo .rs {color: #E6686A;padding-right: 4px;}
+.topDiv>.topNavBar>.logo .card {color: #9A9DA2;font-size:22px;}
+.topDiv>.topNavBar>nav>ul {padding: 30px 10px 10px 10px;}
+.topDiv>.topNavBar>nav>ul>li {float: left;display: block;position: relative;margin-left: 16px;margin-right: 16px;}
+.topDiv>.topNavBar>nav>ul>li>a {color: white;font-size: 16px;border-top: 3px solid transparent;border-bottom: 3px solid transparent;padding-bottom: 5px;padding-top: 5px;position: relative;font-family: "Segoe UI","Lucida Grande",Helvetica,Arial,"Microsoft YaHei",FreeSans,Arimo,"Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3",FontAwesome,sans-serif}
+.topDiv>.topNavBar>nav>ul>li.active>a::after,
+.topDiv>.topNavBar>nav>ul>li.highLight>a::after {content: '';display: block;position: absolute;top: 100%;left: 0;width: 100%;background: #e06567;height: 3px;animation: menuSlide 0.3s;}
+@keyframes menuSlide {0% {width: 0%;}100% {width: 100%;}}
+.topDiv>.topNavBar>nav .submenu {display: none;position: absolute;right: 0;margin-top: 7px;top: 100%;}
+.topDiv>.topNavBar>nav .submenu>li {white-space: nowrap;display: inline-block;padding: 5px 10px;}
+.topDiv>.topNavBar li.active>.submenu {list-style: none;display: block;background: white;color: #3d4451;box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);animation: submenuSlide 0.3s;}
+@keyframes submenuSlide {0% {margin-right: 100%;}100% {margin-right: 0%;}}
+.bgPhoto {height: 750px;background-image: url(./img/rs-cover.jpg);background-position: center center;background-size: cover;}
+.bgPhoto .bgColor {background-color: rgba(0, 0, 0, 0.8);height: 750px;}
+main {color: white;position: absolute;top: 330px;width: 100%;}
+main>.firstLine>.firstFont {font-size: 38px;width: 1070px;margin: auto;margin-bottom: 10px;transform: translateX(-100%);opacity:0;transition: all 0.5s;}
+main>.firstLine>.firstFont.show {opacity: 100;transform: translateX(0);}
+main>.secondLine>.secondFont {font-size: 30px;width: 750px;margin: auto;transform: translateX(100%);opacity:0;transition: all 0.5s;}
+main>.secondLine>.secondFont.show {opacity: 100;transform: translateX(0);}
+main>.start-button {width: 80px;margin: auto;margin-top: 30px;transform: translateY(200%);opacity:0;transition: all 0.7s;}
+main>.start-button.show {opacity: 100;transform: translateY(0);}
+main>.start-button>#startButton {color: white;border: none;background-color: #dd3030;width: 80px;height: 30px;border-radius: 3px;}
+section.aboutSection {color: white; max-width: 1160px; margin: 84px auto;}
+section.aboutSection>h3 {font-weight: 600; font-size: 20px;}
+section.aboutSection>p {margin: 5px 0px;color: #737B8A;}
+section.useSection {background-color: white;}
+section.useSection>div {margin: auto; max-width: 1160px; padding: 84px 0px;}
+section.messageSection {color: white; max-width: 1160px; margin: 84px auto;}
+[data-x].offset {transform: translateY(60px);}
+[data-x] {transform: translateY(0);transition: all 0.5s;}
+.siteLink {
+    display: inline-block;
+    margin-top: 30px;
+    margin-right: 20px;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    border: 1px rgb(59, 53, 53) solid;
+    box-shadow: 0px 0px 4px 2px rgba(153,145,153,1);
+}
+.siteLink > a {
+    display: block;
+    padding: 13px;
+}

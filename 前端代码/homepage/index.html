@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>地图租房</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="topDiv" class="topDiv">
+        <div id="topNavBar" class="topNavBar clearfix">
+            <a class="logo" href="./index.html" alt="logo" style="float:left">
+                <span class="rs">Map</span>
+                <span class="card">rent</span>
+            </a>
+            <nav class="menu" style="float:right">
+                <ul class="clearfix">
+                    <li>
+                        <a href="#bgPhoto">网站首页</a>
+                    </li>
+                    <li>
+                        <a href="#">热门城市</a>
+                        <ul class="submenu">
+                            <li>上海</li>
+                            <li>杭州</li>
+                            <li>成都</li>
+                            <li>北京</li>
+                            <li>威海</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#siteWorks" id="loading">登录注册</a>
+                    </li>
+                    <li>
+                        <a href="#useSection">使用说明</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="bgPhoto" id="bgPhoto">
+        <div class="bgColor"></div>
+    </div>
+    <main class="main">
+        <div class="firstLine">
+            <div class="firstFont">满大街找租房心力交瘁？试试换个方式直接在地图上搜房源吧。</div>
+        </div>
+        <div class="secondLine">
+            <div class="secondFont">房源爬虫 + 高德地图强力驱动,帮助你迅速找到合适房源.</div>
+        </div>
+        <div class="start-button">
+            <button id="startButton">马上开始!</button>
+        </div>
+    </main>
+    <section data-x id="aboutSection" class="aboutSection">
+        <h3>这是什么？</h3>
+        <p>通过爬虫获取公开租房信息，直接在高德地图上直观展示房源位置+基础信息，同时提供住址到公司的路线计算（公交 自驾 or 步行导航）</p>
+        <p>加入我们，注册自己的账户，还可发布自己的房源信息。
+        </p>
+    </section>
+    <section data-x id="useSection" class="useSection">
+        <div>
+            <h3>使用说明</h3>
+            <p>
+                注册自己的账户，需要用户名，密码以及手机号码，注册成功后即可登录，获取自己的信息。
+                <br> 查看租房：点击地图上的标记，查看房源的具体信息，房源链接，以及起始点到该房源的路线， 还可将该房源添加到收藏中。右上角可自己修改起始地点或者选择出行方式。
+                <br> 发布租房：填写相应的信息，地址从地图中选取，点击提交按钮提交即可。
+                <br> 还可在左侧导航栏中点击相应按钮查看自己收藏的或者发布的房源信息。
+            </p>
+        </div>
+
+    </section>
+    <section data-x class="messageSection">
+        <h3>链接：</h3>
+        <div class="siteLink">
+            <a href="http://lbs.amap.com/">高德地图开放平台</a>
+        </div>
+        <div class="siteLink">
+            <a href="https://cn.aliyun.com/">阿里云</a>
+        </div>
+        <div class="siteLink">
+            <a href="https://www.getpostman.com/">POSTMAN</a>
+        </div>
+        <div class="siteLink">
+            <a href="https://github.com/">GitHub</a>
+        </div>
+    </section>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
+    <script src="./js/sticky-topBar.js"></script>
+    <script src="./js/smoothly-navigation.js"></script>
+    <script src="./js/font-slide.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

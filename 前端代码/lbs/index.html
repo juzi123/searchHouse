@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <!-- 原始地址：//webapi.amap.com/ui/1.0/ui/misc/PoiPicker/examples/index.html -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>地图租房</title>
+    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="container" class="map" tabindex="0"></div>
+
+    <div id="pickerBox">
+        <input id="pickerInput" placeholder="输入关键字选取起始地点" />
+        <div id="poiInfo"></div>
+    </div>
+
+    <form class="trafficMode">
+        <input type="radio" name="traffic" id="car" checked>驾车
+        <input type="radio" name="traffic" id="walk">步行
+        <input type="radio" name="traffic" id="bus">公交
+    </form>
+    <div id="panel"></div>
+    <button>
+
+    </button>
+    <div id="colorMes">
+
+        <img src="./image/marker_yellow.png" alt="黄色">
+        <span>0~1000</span>
+
+        <img src="./image/marker_green.png" alt="绿色">
+        <span>1000~2000</span>
+
+        <img src="./image/marker_blue.png" alt="蓝色">
+        <span>2000~3000</span>
+
+        <img src="./image/marker_deepblue.png" alt="深蓝">
+        <span>3000~4000</span>
+
+        <img src="./image/marker_red.png" alt="红色">
+        <span>4000~5000</span>
+
+        <img src="./image/marker_black.png" alt="黑色">
+        <span>>5000</span>
+
+    </div>
+    <div class="alert"></div>
+
+    <script type="text/javascript" src='//webapi.amap.com/maps?v=1.4.6&key=8a1c986f1cfb71b8156514b727381fbd&plugin=AMap.Driving&plugin=AMap.Walking&plugin=AMap.Transfer'></script>
+    <!-- UI组件库 1.0 -->
+    <script src="//webapi.amap.com/ui/1.0/main.js?v=1.0.11"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

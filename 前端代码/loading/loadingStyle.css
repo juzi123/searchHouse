@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+}
+input {
+    display: block;
+    width: 300px;
+    margin: 10px auto 10px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,0.4);
+    text-align: center;
+}
+.background {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background-image: url(./loadingimage/background_pic.jpg);
+    background-position: center center;
+    background-size: cover;
+    z-index: -1;
+}
+.bgColor {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.main {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+.panel {
+    height: 550px;
+    width: 900px;
+    border: solid 2px white;
+    border-radius: 2px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+.roll_img {
+    height: 550px;
+    width: 900px;
+    top: 0px;
+    position: relative;
+    color: white;
+}
+.roll_img > .roll_panel {
+    width: 260px;
+    height: 550px;
+    position: relative;
+    left: 640px;
+    transition: all 1s;
+}
+.roll_img > .roll_panel.showUp {
+    transform: translateX(-640px);
+}
+.roll_img >.roll_panel> .img_text {
+    text-align: center;
+}
+.roll_img >.roll_panel>.img_text > h2 {
+    margin-top: 80px;
+    margin-bottom: 10px;
+}
+.roll_img >.roll_panel>.sign_up_text {
+    position: absolute;
+    right: 8px;
+    width: 252px;
+    height: 220px;
+}
+.roll_img >.roll_panel>.sign_up_text.showUp{
+    display: none;
+}
+.roll_img >.roll_panel> .sign_in_text {
+    display: none;
+    position: absolute;
+    left: 8px;
+    width: 252px;
+    height: 220px;
+}
+.roll_img >.roll_panel> .sign_in_text.showUp {
+    display: inline;
+}
+.roll_img > .roll_panel>.img_btn {
+    font-weight: 500;
+    text-align: center;
+}
+.roll_img >.roll_panel>.img_btn > .sign_up_btn {
+    color: white;
+    position: absolute;
+    width: 100px;
+    height: 36px;
+    font-size: 15px;
+    line-height: 30px;
+    right: 80px;
+    bottom: 160px;
+    border: 2px white solid;
+    border-radius: 16px;
+    background-color: transparent;
+}
+.roll_img >.roll_panel>.img_btn > .sign_up_btn.showUp{
+    display: none;
+}
+.roll_img >.roll_panel> .img_btn > .sign_in_btn {
+    display: none;
+    color: white;
+    position: absolute;
+    width: 100px;
+    height: 36px;
+    font-size: 15px;
+    line-height: 30px;
+    left: 80px;
+    bottom: 160px;
+    border: 2px white solid;
+    border-radius: 16px;
+    background-color: transparent;
+}
+.roll_img >.roll_panel> .img_btn > .sign_in_btn.showUp{
+    display: block;
+}
+.sign_in {
+    position: absolute;
+    top:0;
+    left:0;
+    overflow: hidden;
+    width: 640px;
+    height: 100%;
+    background-color: #fff;
+    transition: all 1s;
+}
+.sign_in.showUp {
+    width: 0px;
+}
+.sign_in > h2 {
+    white-space: nowrap;
+    font-weight: 600;
+    text-align: center;
+    padding: 80px 0 60px 0;
+}
+.sign_in > label > h3 {
+    color: rgb(184, 178, 178);
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+}
+.sign_in > button {
+    position: absolute;
+    width: 300px;
+    height: 38px;
+    margin-top: 60px;
+    right: 170px;
+    border: none;
+    border-radius: 20px;
+    background: #D4AF7A;
+    color: white;
+    font-size: 16px;
+} 
+.sign_up {
+    width: 0px;
+    overflow: hidden;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: all 1s;
+}
+.sign_up.showUp{
+    width: 640px;
+    display: block;
+}
+.sign_up > h2 {
+    white-space:nowrap;
+    font-weight: 600;
+    text-align: center;
+    padding: 80px 0 60px 0;
+}
+.sign_up > label > h3 {
+    color: rgb(184, 178, 178);
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+}
+.sign_up > button {
+    width: 300px;
+    height: 38px;
+    margin: 60px 170px 0px;
+    border: none;
+    border-radius: 20px;
+    background: #D4AF7A;
+    color: white;
+    font-size: 16px;
+} 
+
+
+.alert {display: none;position: fixed;top: 10%;left: 50%;min-width: 200px;margin-left: -100px;z-index: 99999;padding: 15px;border: 1px solid transparent;border-radius: 4px;}
+.alert-info {color: #31708f;background-color: #d9edf7;border-color: #bce8f1;}
+.alert-warning {color: #8a6d3b;background-color: #fcf8e3;border-color: #faebcc;}
+.alert-danger {color: #a94442;background-color: #f2dede;border-color: #ebccd1;}
+.alert-success {color: #3c763d;background-color: #dff0d8;border-color: #d6e9c6;}

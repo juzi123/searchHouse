@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地图租房</title>
+    <link rel='stylesheet prefetch' href='./css/bootstrap.min.css'>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="overlay"></div>
+
+        <!-- Sidebar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+            <ul class="nav sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        地图租房
+                    </a>
+                </li>
+                <li id="viewRentals">
+                    <a href="#">
+                        <i class="fa fa-fw fa-home"></i>查看租房</a>
+                </li>
+                <li id="publishRentals">
+                    <a href="#">
+                        <i class="fa fa-fw fa-plus"></i>发布租房</a>
+                </li>
+                <li id="viewCollection">
+                    <a href="#">
+                        <i class="fa fa-fw fa-file-o"></i>查看收藏</a>
+                </li>
+                <li id="viewPublished">
+                    <a href="#">
+                        <i class="fa fa-fw fa-folder"></i>查看发布</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
+                <span class="hamb-top"></span>
+                <span class="hamb-middle"></span>
+                <span class="hamb-bottom"></span>
+            </button>
+            <!-- <div class="container">
+                
+            </div> -->
+        </div>
+        <!-- /#page-content-wrapper -->
+
+        <iframe src="../lbs/index.html" frameborder="0" class="frame show">
+        </iframe>
+
+
+        <div class="panel">
+            <form class="publishframe form-horizontal">
+                <h2>填写以下信息来发布你的房源！</h2>
+                <div class="form-group">
+                    <label>
+                        <p>标题:</p>
+                        <input class="form-control" id="titleVal" type="text">
+                    </label>
+                    <label>
+                        <p>住房结构:</p>
+                        <input class="form-control" id="capacityVal" type="text">
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <p>支付方式:</p>
+                        <input class="form-control" id="paywayVal" type="text">
+                    </label>
+                    <label>
+                        <p>价格:</p>
+                        <input class="form-control" id="priceVal" type="text">
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <p>住房面积:</p>
+                        <input class="form-control" id="areaVal" type="text">
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <p>房源介绍:</p>
+                        <textarea class="form-control" id="introductionVal" rows="3"></textarea>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <p>地址:</p>
+                        <input class="form-control long" id="locationVal" type="text">
+                    </label>
+                    <label>
+                        <p>经度:</p>
+                        <input class="form-control short" id="lngVal" type="text">
+                    </label>
+                    <label>
+                        <p>纬度:</p>
+                        <input class="form-control short" id="latVal" type="text">
+                    </label>
+                </div>
+                <iframe src="./getlocation.html" frameborder="0" id="getlocation"></iframe>
+                <button type="button" class="submit btn btn-primary" id="rentSubmit">提交</button>
+            </form>
+
+            <div class="viewCollect">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>房源Id</th>
+                            <th>价格</th>
+                            <th>地址</th>
+                            <th>详细信息</th>
+                            <th>链接</th>
+                            <th>删除</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="viewPublish">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>房源Id</th>
+                            <th>价格</th>
+                            <th>地址</th>
+                            <th>详细信息</th>
+                            <th>当前状态</th>
+                            <th>修改状态</th>
+                            <th>删除房源</th>
+                        </tr>
+                    </thead>
+                    <tbody id="publishTableBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="showMessage" id="showMessage">
+        </div>
+
+        <div class="alert"></div>
+
+    </div>
+    <!-- /#wrapper -->
+
+    <script src="./js/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script src='./js/bootstrap.min.js'></script>
+    <script src="./js/side_nav.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/publishHouse.js"></script>
+    <script src="./js/getCollectHouse.js"></script>
+    <script src="./js/getPublishHouse.js"></script>
+</body>
+
+</html>
